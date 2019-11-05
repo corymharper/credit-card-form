@@ -5,6 +5,8 @@ const FormContainer = () => {
   const [data, setData] = useState({
     cardNumber: '',
     cardHolder: '',
+    month: '',
+    day: '',
     cvv: '',
   });
 

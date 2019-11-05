@@ -19,29 +19,60 @@
     width: 100%;
 
     .form-container__form-input {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+    }
 
-      label {
-        display: block;
-        font-size: 14px;
-        margin-bottom: 5px;
-      }
+    .form-container__form-row {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
 
-      input {
-        width: 100%;
-        height: 50px;
-        font-size: 18px;
-        border-radius: 5px;
-        padding: 5px 15px;
-        box-shadow: none;
-        z-index: 2;
-        border: 1px solid #ced6e0;
+      .form-container__form-date-input {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 2.5;
+        flex-basis: 0;
 
-        &:hover, &:focus {
-          border-color: #3d9cff;
-          outline: none;
+        .form-container__form-date-input-select{
+          flex: 1;
+          margin-right: 15px;
         }
       }
+
+      .form-container__form-cvv-input {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+    }
+
+    label {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      height: 50px;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      box-shadow: none;
+      z-index: 2;
+      border: 1px solid #ced6e0;
+
+      &:hover, &:focus {
+        border-color: #3d9cff;
+        outline: none;
+      }
+
+      &:focus {
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    input {
+      width: 100%;
     }
   }
 
