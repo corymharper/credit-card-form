@@ -11,7 +11,11 @@ const CardDetailsForm = ({ handleChange, handleSubmit, data }) => (
 CardDetailsForm.propTypes = {
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    cardNumber: '',
+    cardHolder: '',
+    cvv: '',
+  }).isRequired,
 };
 
 export default CardDetailsForm;
