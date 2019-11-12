@@ -8,9 +8,10 @@ const CardDetailsForm = ({ handleChange, handleSubmit, data }) => (
     <TextInput label="Card Number" id="cardNumber" onChange={handleChange} value={data.cardNumber} name="cardnumber" autoComplete="off" />
     <TextInput label="Card Holder" id="cardHolder" onChange={handleChange} value={data.cardHolder} />
     <div className="form-container__form-row">
-      <DateInput dayValue={data.day} monthValue={data.month} />
+      <DateInput yearValue={data.year} monthValue={data.month} onChange={handleChange} />
       <TextInput label="CVV" id="cvv" onChange={handleChange} value={data.cvv} classes="form-container__form-cvv-input" />
     </div>
+    <button type="submit" className="form-container__form-submit-button shadow">Submit</button>
   </form>
 );
 
@@ -21,7 +22,7 @@ CardDetailsForm.propTypes = {
     cardNumber: PropTypes.string,
     cardHolder: PropTypes.string,
     month: PropTypes.string,
-    day: PropTypes.string,
+    year: PropTypes.string,
     cvv: PropTypes.string,
   }).isRequired,
 };
